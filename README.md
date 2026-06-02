@@ -36,7 +36,7 @@ Il s’inscrit dans mon projet personnel de montée en compétence en administra
   - [Configuration d'un redirecteur DNS vers les serveurs publics de Google](#configuration-dun-redirecteur-dns-vers-les-serveurs-publics-de-google)
     - [Quelle est la différence entre un enregistrement A et un CNAME ?](#quelle-est-la-différence-entre-un-enregistrement-a-et-un-cname-)
     - [Enregistrement CNAME (Canonical Name Record)](#enregistrement-cname-canonical-name-record)
-    - [🧠 Différences clés](#-différences-clés)
+    - [Différences clés](#-différences-clés)
     - [Quelle commande permet de vérifier la liste des zones DNS existantes ?](#quelle-commande-permet-de-vérifier-la-liste-des-zones-dns-existantes-)
     - [Pourquoi utiliser un redirecteur dans un DNS d’entreprise ?](#pourquoi-utiliser-un-redirecteur-dans-un-dns-dentreprise-)
 - [DHCP](#dhcp)
