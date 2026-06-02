@@ -87,7 +87,7 @@ Un redémarrage sera demandé
 
 **J'ai créé un script pour chaque objectif. Il reprend les commandes expliquées ici mais avec quelques optimisations du code.**
 **Dans chaque script, toute structure de code qui diffère des commandes simples décrites dans le readme﻿ est systématiquement expliquée par un commentaire.**
-**Pour chaque script, les fichiers de transcription et journaux sont dans [HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/logs/](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/logs/)**
+**Pour chaque script, les fichiers de transcription et journaux sont dans [exports/logs/](exports/logs/)**
 
 ### Rédaction d’un script de rapport système avant de commencer le projet
 
@@ -128,7 +128,7 @@ Write-Host "Rapport généré dans $OutFile" -ForegroundColor Green
 
 # Lancement du script et lecture du rapport
 
-![Capture d’écran de l’interface](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/LancementScriptetOuvertureExport.png)
+![Capture d’écran de l’interface](exports/screenshots/LancementScriptetOuvertureExport.png)
 
 
 
@@ -236,32 +236,32 @@ Write-Host "N'oubliez pas de redémarrer le serveur pour appliquer toutes les mo
 
 Sur le poste client appartenant au domaine, dans la session de l'utilisateur mdupont, j'ai bien accès au partage SMB :
  
-![Capture d’écran de l’interface](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/connexionUtilisateurLecteurReseau.png)
+![Capture d’écran de l’interface](exports/screenshots/connexionUtilisateurLecteurReseau.png)
 
 ## Script général d'installation et de configuration d'Active Directory
-Le fichier de sortie du script Active Directory se trouve [ici](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/logs/transcriptAD_admin.txt)
+Le fichier de sortie du script Active Directory se trouve [ici](exports/logs/transcriptAD_admin.txt)
 
-Lors du lancement d'[ad_admin](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/scripts/ad_admin.ps1) on obtient cela : 
+Lors du lancement d'[ad_admin](scripts/ad_admin.ps1) on obtient cela : 
 
-![](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/Debutdu1erlancementduScript.png)
+![](exports/screenshots/Debutdu1erlancementduScript.png)
 
 Fin du premier lancement du script :
 
-![Fin du premier lancement](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/Findu1erlancementduScript.png)
+![Fin du premier lancement](exports/screenshots/Findu1erlancementduScript.png)
 
 Début du second lancement du script :
 
-![Début du second lancement](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/DebutdusecondlancementduScript.png)
+![Début du second lancement](exports/screenshots/DebutdusecondlancementduScript.png)
 
 Milieu du second lancement du script :
 
-![Milieu du second lancement du script](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/MilieudusecondlancementduScript.png)
+![Milieu du second lancement du script](exports/screenshots/MilieudusecondlancementduScript.png)
 
 À la fin de la seconde exécution du script, j’ai la possibilité de renseigner le mot de passe du compte administrateur du domaine.
 
 Fin du second lancement du script :
 
-![Fin du second lancement](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/FindusecondlancementduScript.png)
+![Fin du second lancement](exports/screenshots/FindusecondlancementduScript.png)
 
 # Configuration du DNS.
 
@@ -271,7 +271,7 @@ Fin du second lancement du script :
 Get-WindowsFeature DNS
 ````
 
-![](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/2025-11-18_00h36_39.png)
+![](exports/screenshots/2025-11-18_00h36_39.png)
 
 
 Affiche les détails de la zone DNS 'entreprisexyz.local'
@@ -279,13 +279,13 @@ Affiche les détails de la zone DNS 'entreprisexyz.local'
 Get-DnsServerZone -Name 'entreprisexyz.local'
 ````
 
-![](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/2025-11-18_00h49_04.png)
+![](exports/screenshots/2025-11-18_00h49_04.png)
 
 Supprime la zone DNS 'entreprisexyz.local'
 ````pwsh
 Remove-DnsServerZone -Name 'entreprisexyz.local'
 ````
-![](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/2025-11-18_00h53_24.png)
+![](exports/screenshots/2025-11-18_00h53_24.png)
 
 Crée une nouvelle zone primaire DNS avec réplication de domaine sécurisée
 ````pwsh
@@ -313,18 +313,18 @@ Récupération de tous les enregistrements DNS de type PTR dans la zone de reche
 ````PS 
 Get-DnsServerResourceRecord -ZoneName "147.168.192.in-addr.arpa" -RRType PTR
 ````
-![](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/2025-11-18_01h33_16.png)
+![](exports/screenshots/2025-11-18_01h33_16.png)
 
 Enregistrements de type A dans la zone directe
 
 ````PS 
 Get-DnsServerResourceRecord -ZoneName "entreprisexyz.local" -RRType A
 ````
-![](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/2025-11-18_01h19_54.png)
+![](exports/screenshots/2025-11-18_01h19_54.png)
 
 Résolution de srv-dc1 en zone directe et en zone inverse
 
-![](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/2025-11-18_01h13_40.png)
+![](exports/screenshots/2025-11-18_01h13_40.png)
 
 
 ## Configuration d'un redirecteur DNS vers les serveurs publics de Google
@@ -333,7 +333,7 @@ Résolution de srv-dc1 en zone directe et en zone inverse
 PS C:\Windows\System32> Set-DnsServerForwarder -IPAddress 8.8.8.8,8.8.4.4
 PS C:\Windows\System32> Get-DnsServerForwarder
 ````
-![](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/ConfRedirecteursDNS.png)
+![](exports/screenshots/ConfRedirecteursDNS.png)
 
 
 ### Quelle est la différence entre un enregistrement A et un CNAME ?
@@ -374,7 +374,7 @@ La commande pour vérifier la liste des zones DNS existantes est
 Get-DnsServerZone
 ````
 
-![](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/2025-11-18_01h38_03.png)
+![](exports/screenshots/2025-11-18_01h38_03.png)
 
 
 ### Pourquoi utiliser un redirecteur dans un DNS d’entreprise ?
@@ -413,7 +413,7 @@ Le réseau du lab utilise la plage d’adresses suivante : `192.168.147.0/24`
 Install-WindowsFeature DHCP -IncludeManagementTools
 ````
 
-![](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/2025-11-18_22h17_23.png)
+![](exports/screenshots/2025-11-18_22h17_23.png)
 
 Autorise le serveur srv-dc1 dans l'AD
 
@@ -436,7 +436,7 @@ Set-DhcpServerv4OptionValue -ScopeId 192.168.147.0 -DnsDomain "entreprisexyz.loc
 ```
 Voici une capture d'écran de mon terminal pour ces commandes :
 
-![](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/2025-11-19_02h31_07.png)
+![](exports/screenshots/2025-11-19_02h31_07.png)
 
 ### La Réservation du poste administratif se fait par cette commande :
 
@@ -461,7 +461,7 @@ Get-NetIPInterface -InterfaceAlias "Ethernet0" | Where-Object {$_.AddressFamily 
 (Get-NetIPConfiguration -InterfaceAlias "Ethernet0").IPv4Address.IPAddress
 ````
 
-![](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/2025-11-19_04h59_32.png)
+![](exports/screenshots/2025-11-19_04h59_32.png)
 
 
-![](HomeLab_Windows_Server_AD_DNS_DHCP_PowerShell/exports/screenshots/2025-11-19_06h08_35.png)
+![](exports/screenshots/2025-11-19_06h08_35.png)
