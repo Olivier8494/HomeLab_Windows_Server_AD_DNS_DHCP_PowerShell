@@ -355,7 +355,7 @@ Enregistrement A (Address Record)
 
 ---
 
-### 🧠 Différences clés
+### Différences clés
 
 | Aspect                  | Enregistrement A                  | Enregistrement CNAME               |
 |------------------------|-----------------------------------|------------------------------------|
