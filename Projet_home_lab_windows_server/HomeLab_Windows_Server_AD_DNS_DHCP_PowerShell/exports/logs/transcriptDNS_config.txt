@@ -1,0 +1,206 @@
+**********************
+PowerShell transcript start
+Start time: 20251117075216
+Username: ENTREPRISEXYZ\administrateur
+RunAs User: ENTREPRISEXYZ\administrateur
+Configuration Name: 
+Machine: SRV-DC01 (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoExit -RemoveWorkingDirectoryTrailingCharacter -WorkingDirectory C:\Users\Administrateur\Scripts! -Command $host.UI.RawUI.WindowTitle = 'PowerShell 7 (x64)'
+Process ID: 7712
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26100
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is O:\transcriptDNS_config.txt
+--- Vérification des services ---
+
+Display Name                                            Name                       Install State
+------------                                            ----                       -------------
+                                                        DNS                            Installed
+
+Status      : Running
+Name        : DNS
+DisplayName : Serveur DNS
+
+--- Nettoyage des anciennes zones ---
+--- Création des zones ---
+--- Ajout des enregistrements A et PTR ---
+--- Vérification Finale ---
+
+DistinguishedName                 : DC=_msdcs.EntrepriseXYZ.local,cn=MicrosoftDNS,DC=ForestDnsZones,DC=EntrepriseXYZ,D
+                                    C=local
+IsAutoCreated                     : False
+IsDsIntegrated                    : True
+IsPaused                          : False
+IsReadOnly                        : False
+IsReverseLookupZone               : False
+IsShutdown                        : False
+ZoneName                          : _msdcs.EntrepriseXYZ.local
+ZoneType                          : Primary
+AllowedDcForNsRecordsAutoCreation : 
+DirectoryPartitionName            : ForestDnsZones.EntrepriseXYZ.local
+DynamicUpdate                     : Secure
+IgnorePolicies                    : False
+IsSigned                          : False
+IsWinsEnabled                     : False
+Notify                            : NotifyServers
+NotifyServers                     : 
+ReplicationScope                  : Forest
+SecondaryServers                  : 
+SecureSecondaries                 : NoTransfer
+ZoneFile                          : 
+PSComputerName                    : 
+
+
+DistinguishedName                 : 
+IsAutoCreated                     : True
+IsDsIntegrated                    : False
+IsPaused                          : False
+IsReadOnly                        : False
+IsReverseLookupZone               : True
+IsShutdown                        : False
+ZoneName                          : 0.in-addr.arpa
+ZoneType                          : Primary
+AllowedDcForNsRecordsAutoCreation : 
+DirectoryPartitionName            : 
+DynamicUpdate                     : None
+IgnorePolicies                    : True
+IsSigned                          : False
+IsWinsEnabled                     : False
+Notify                            : Notify
+NotifyServers                     : 
+ReplicationScope                  : None
+SecondaryServers                  : 
+SecureSecondaries                 : TransferToZoneNameServer
+ZoneFile                          : 
+PSComputerName                    : 
+
+
+DistinguishedName                 : 
+IsAutoCreated                     : True
+IsDsIntegrated                    : False
+IsPaused                          : False
+IsReadOnly                        : False
+IsReverseLookupZone               : True
+IsShutdown                        : False
+ZoneName                          : 127.in-addr.arpa
+ZoneType                          : Primary
+AllowedDcForNsRecordsAutoCreation : 
+DirectoryPartitionName            : 
+DynamicUpdate                     : None
+IgnorePolicies                    : True
+IsSigned                          : False
+IsWinsEnabled                     : False
+Notify                            : Notify
+NotifyServers                     : 
+ReplicationScope                  : None
+SecondaryServers                  : 
+SecureSecondaries                 : TransferToZoneNameServer
+ZoneFile                          : 
+PSComputerName                    : 
+
+
+DistinguishedName                 : DC=147.168.192.in-addr.arpa,cn=MicrosoftDNS,DC=DomainDnsZones,DC=EntrepriseXYZ,DC=
+                                    local
+IsAutoCreated                     : False
+IsDsIntegrated                    : True
+IsPaused                          : False
+IsReadOnly                        : False
+IsReverseLookupZone               : True
+IsShutdown                        : False
+ZoneName                          : 147.168.192.in-addr.arpa
+ZoneType                          : Primary
+AllowedDcForNsRecordsAutoCreation : 
+DirectoryPartitionName            : DomainDnsZones.EntrepriseXYZ.local
+DynamicUpdate                     : Secure
+IgnorePolicies                    : False
+IsSigned                          : False
+IsWinsEnabled                     : False
+Notify                            : NotifyServers
+NotifyServers                     : 
+ReplicationScope                  : Domain
+SecondaryServers                  : 
+SecureSecondaries                 : NoTransfer
+ZoneFile                          : 
+PSComputerName                    : 
+
+
+DistinguishedName                 : 
+IsAutoCreated                     : True
+IsDsIntegrated                    : False
+IsPaused                          : False
+IsReadOnly                        : False
+IsReverseLookupZone               : True
+IsShutdown                        : False
+ZoneName                          : 255.in-addr.arpa
+ZoneType                          : Primary
+AllowedDcForNsRecordsAutoCreation : 
+DirectoryPartitionName            : 
+DynamicUpdate                     : None
+IgnorePolicies                    : True
+IsSigned                          : False
+IsWinsEnabled                     : False
+Notify                            : Notify
+NotifyServers                     : 
+ReplicationScope                  : None
+SecondaryServers                  : 
+SecureSecondaries                 : TransferToZoneNameServer
+ZoneFile                          : 
+PSComputerName                    : 
+
+
+DistinguishedName                 : DC=entreprisexyz.local,cn=MicrosoftDNS,DC=DomainDnsZones,DC=EntrepriseXYZ,DC=local
+IsAutoCreated                     : False
+IsDsIntegrated                    : True
+IsPaused                          : False
+IsReadOnly                        : False
+IsReverseLookupZone               : False
+IsShutdown                        : False
+ZoneName                          : entreprisexyz.local
+ZoneType                          : Primary
+AllowedDcForNsRecordsAutoCreation : 
+DirectoryPartitionName            : DomainDnsZones.EntrepriseXYZ.local
+DynamicUpdate                     : Secure
+IgnorePolicies                    : False
+IsSigned                          : False
+IsWinsEnabled                     : False
+Notify                            : NotifyServers
+NotifyServers                     : 
+ReplicationScope                  : Domain
+SecondaryServers                  : 
+SecureSecondaries                 : NoTransfer
+ZoneFile                          : 
+PSComputerName                    : 
+
+Test A:
+
+Test PTR:
+
+
+DistinguishedName : DC=10,DC=147.168.192.in-addr.arpa,cn=MicrosoftDNS,DC=DomainDnsZones,DC=EntrepriseXYZ,DC=local
+HostName          : 10
+RecordClass       : IN
+RecordData        : DnsServerResourceRecordPtr
+RecordType        : PTR
+Timestamp         : 
+TimeToLive        : 01:00:00
+Type              : 12
+PSComputerName    : 
+
+
+Name      : 10.147.168.192.in-addr.arpa.
+QueryType : PTR
+TTL       : 1200
+Section   : Question
+NameHost  : srv-dc01.EntrepriseXYZ.local
+
+**********************
+PowerShell transcript end
+End time: 20251117075220
+**********************

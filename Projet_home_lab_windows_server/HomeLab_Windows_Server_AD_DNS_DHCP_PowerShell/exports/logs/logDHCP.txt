@@ -1,0 +1,113 @@
+**********************
+PowerShell transcript start
+Start time: 20251119055930
+Username: ENTREPRISEXYZ\administrateur
+RunAs User: ENTREPRISEXYZ\administrateur
+Configuration Name: 
+Machine: SRV-DC1 (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoExit -RemoveWorkingDirectoryTrailingCharacter -WorkingDirectory C:\Users\Administrateur\Scripts! -Command $host.UI.RawUI.WindowTitle = 'PowerShell 7 (x64)'
+Process ID: 6904
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26100
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is O:\logDHCP.txt
+--- ÉTAPE 1 : Installation du rôle DHCP ---
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             Success        {Serveur DHCP, Outils du serveur DHCP}
+--- ÉTAPE 2 : Autorisation DHCP dans le Domaine ---
+Le serveur DHCP a été déclaré et autorisé dans l'AD.
+--- ÉTAPE 3 : Création de l'étendue LAN_EntrepriseXYZ ---
+Étendue LAN_EntrepriseXYZ créée et activée.
+--- ÉTAPE 4 : Configuration des options DHCP ---
+Options Router, DNS et Domaine configurées pour l'étendue 192.168.147.0.
+--- ÉTAPE 5 : Création de la Réservation RES-PosteAdmin ---
+Réservation créée : 192.168.147.216 liée à la MAC 000C29B1F2DE
+
+=== VÉRIFICATION DE LA CONFIGURATION DHCP ===
+
+RunspaceId       : df460185-e278-408b-87c6-a8ebb27a63bc
+ActivatePolicies : True
+Delay            : 0
+Description      : 
+EndRange         : 192.168.147.220
+LeaseDuration    : 8.00:00:00
+MaxBootpClients  : 4294967295
+Name             : LAN_EntrepriseXYZ
+NapEnable        : False
+NapProfile       : 
+ScopeId          : 192.168.147.0
+StartRange       : 192.168.147.200
+State            : Active
+SubnetMask       : 255.255.255.0
+SuperscopeName   : 
+Type             : Dhcp
+
+
+Options DHCP configurées :
+
+RunspaceId  : df460185-e278-408b-87c6-a8ebb27a63bc
+Name        : Bail
+OptionId    : 51
+PolicyName  : 
+Type        : DWord
+UserClass   : 
+Value       : {691200}
+VendorClass : 
+
+
+RunspaceId  : df460185-e278-408b-87c6-a8ebb27a63bc
+Name        : Nom de domaine DNS
+OptionId    : 15
+PolicyName  : 
+Type        : String
+UserClass   : 
+Value       : {entreprisexyz.local}
+VendorClass : 
+
+
+RunspaceId  : df460185-e278-408b-87c6-a8ebb27a63bc
+Name        : Routeur
+OptionId    : 3
+PolicyName  : 
+Type        : IPv4Address
+UserClass   : 
+Value       : {192.168.147.1}
+VendorClass : 
+
+
+RunspaceId  : df460185-e278-408b-87c6-a8ebb27a63bc
+Name        : Serveurs DNS
+OptionId    : 6
+PolicyName  : 
+Type        : IPv4Address
+UserClass   : 
+Value       : {192.168.147.10}
+VendorClass : 
+
+
+Réservations DHCP :
+
+RunspaceId   : df460185-e278-408b-87c6-a8ebb27a63bc
+AddressState : InactiveReservation
+ClientId     : 00-0c-29-b1-f2-de
+Description  : Réservation permanente pour le poste administratif.
+IPAddress    : 192.168.147.216
+Name         : RES-PosteAdmin
+ScopeId      : 192.168.147.0
+Type         : Both
+
+
+Configuration DHCP terminée avec succès!
+**********************
+PowerShell transcript end
+End time: 20251119060338
+**********************

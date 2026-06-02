@@ -1,0 +1,42 @@
+**********************
+PowerShell transcript start
+Start time: 20251119052920
+Username: ENTREPRISEXYZ\administrateur
+RunAs User: ENTREPRISEXYZ\administrateur
+Configuration Name: 
+Machine: SRV-DC1 (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoExit -RemoveWorkingDirectoryTrailingCharacter -WorkingDirectory C:\Users\Administrateur\Scripts! -Command $host.UI.RawUI.WindowTitle = 'PowerShell 7 (x64)'
+Process ID: 5776
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26100
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is O:\transcriptDHCP_config.txt
+--- ÉTAPE 1 : Installation du rôle DHCP ---
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             Success        {Serveur DHCP, Outils du serveur DHCP}
+--- ÉTAPE 2 : Autorisation DHCP dans le Domaine ---
+Groupes de sécurité DHCP créés.
+WARNING: Waiting for service 'Serveur DHCP (DhcpServer)' to start...
+WARNING: Waiting for service 'Serveur DHCP (DhcpServer)' to start...
+Service DHCP redémarré.
+Le serveur DHCP a été déclaré et autorisé dans l'AD.
+--- ÉTAPE 3 : Création de l'étendue LAN_EntrepriseXYZ ---
+Étendue LAN_EntrepriseXYZ créée et activée.
+--- ÉTAPE 4 : Configuration des options DHCP ---
+Options Router, DNS et Domaine configurées pour l'étendue 192.168.147.0.
+--- ÉTAPE 5 : Création de la Réservation RES-PosteAdmin ---
+Réservation créée : 192.168.147.216 liée à la MAC 000C29B1F2DE
+Le déploiement DHCP est terminé. Vérifiez l'état de l'étendue dans la console.
+**********************
+PowerShell transcript end
+End time: 20251119053334
+**********************

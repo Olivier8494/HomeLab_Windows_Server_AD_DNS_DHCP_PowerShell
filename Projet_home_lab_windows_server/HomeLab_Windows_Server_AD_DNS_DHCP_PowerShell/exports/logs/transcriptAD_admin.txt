@@ -1,0 +1,742 @@
+**********************
+PowerShell transcript start
+Start time: 20251117023955
+Username: SRV-DC01\Administrateur
+RunAs User: SRV-DC01\Administrateur
+Configuration Name: 
+Machine: SRV-DC01 (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -WorkingDirectory ~
+Process ID: 7392
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26100
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is O:\transcript.txt
+Installation du rôle Active Directory Domain Services...
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             Success        {Services de domaine Active Directory, Gesti…
+Installation AD requise...
+Lancement de la promotion du contrôleur de domaine (Install-ADDSForest)...
+
+RunspaceId     : 197964f1-de1f-4cc3-82a3-51768eb2e112
+Message        : L’opération s’est déroulée avec succès.
+Context        : DCPromo.General.3
+RebootRequired : False
+Status         : Success
+
+Installation AD terminée.
+PS>TerminatingError(New-ADOrganizationalUnit): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADOrganizationalUnit: C:\Users\Administrateur\Scripts\ad_admin.ps1:55
+Line |
+  55 |  New-ADOrganizationalUnit -Name "Direction" -Path "DC=EntrepriseXYZ,DC …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADOrganizationalUnit: C:\Users\Administrateur\Scripts\ad_admin.ps1:55
+Line |
+  55 |  New-ADOrganizationalUnit -Name "Direction" -Path "DC=EntrepriseXYZ,DC …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+OU créée : Direction
+PS>TerminatingError(New-ADOrganizationalUnit): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADOrganizationalUnit: C:\Users\Administrateur\Scripts\ad_admin.ps1:57
+Line |
+  57 |  New-ADOrganizationalUnit -Name "RH" -Path "DC=EntrepriseXYZ,DC=local" …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADOrganizationalUnit: C:\Users\Administrateur\Scripts\ad_admin.ps1:57
+Line |
+  57 |  New-ADOrganizationalUnit -Name "RH" -Path "DC=EntrepriseXYZ,DC=local" …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+OU créée : RH
+PS>TerminatingError(New-ADOrganizationalUnit): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADOrganizationalUnit: C:\Users\Administrateur\Scripts\ad_admin.ps1:59
+Line |
+  59 |  New-ADOrganizationalUnit -Name "Informatique" -Path "DC=EntrepriseXYZ …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADOrganizationalUnit: C:\Users\Administrateur\Scripts\ad_admin.ps1:59
+Line |
+  59 |  New-ADOrganizationalUnit -Name "Informatique" -Path "DC=EntrepriseXYZ …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+OU créée : Informatique
+Création des Unités Organisationnelles terminée.
+PS>TerminatingError(New-ADUser): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:68
+Line |
+  68 |  New-ADUser -Name "Marc Dupont" -GivenName "Marc" -Surname "Dupont" -S …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:68
+Line |
+  68 |  New-ADUser -Name "Marc Dupont" -GivenName "Marc" -Surname "Dupont" -S …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+PS>TerminatingError(New-ADUser): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:69
+Line |
+  69 |  New-ADUser -Name "Claire Lemoine" -GivenName "Claire" -Surname "Lemoi …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:69
+Line |
+  69 |  New-ADUser -Name "Claire Lemoine" -GivenName "Claire" -Surname "Lemoi …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+PS>TerminatingError(New-ADUser): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:70
+Line |
+  70 |  New-ADUser -Name "Paul Bernard" -GivenName "Paul" -Surname "Bernard"  …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:70
+Line |
+  70 |  New-ADUser -Name "Paul Bernard" -GivenName "Paul" -Surname "Bernard"  …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+PS>TerminatingError(New-ADUser): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:71
+Line |
+  71 |  New-ADUser -Name "Sophie Durand" -GivenName "Sophie" -Surname "Durand …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:71
+Line |
+  71 |  New-ADUser -Name "Sophie Durand" -GivenName "Sophie" -Surname "Durand …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+PS>TerminatingError(New-ADUser): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:72
+Line |
+  72 |  New-ADUser -Name "Luc Meyer" -GivenName "Luc" -Surname "Meyer" -SamAc …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:72
+Line |
+  72 |  New-ADUser -Name "Luc Meyer" -GivenName "Luc" -Surname "Meyer" -SamAc …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+PS>TerminatingError(New-ADUser): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:73
+Line |
+  73 |  New-ADUser -Name "Anne Legrand" -GivenName "Anne" -Surname "Legrand"  …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:73
+Line |
+  73 |  New-ADUser -Name "Anne Legrand" -GivenName "Anne" -Surname "Legrand"  …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+PS>TerminatingError(New-ADUser): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:74
+Line |
+  74 |  New-ADUser -Name "Jean Martin" -GivenName "Jean" -Surname "Martin" -S …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:74
+Line |
+  74 |  New-ADUser -Name "Jean Martin" -GivenName "Jean" -Surname "Martin" -S …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+PS>TerminatingError(New-ADUser): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:75
+Line |
+  75 |  New-ADUser -Name "Eva Petit" -GivenName "Eva" -Surname "Petit" -SamAc …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:75
+Line |
+  75 |  New-ADUser -Name "Eva Petit" -GivenName "Eva" -Surname "Petit" -SamAc …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+PS>TerminatingError(New-ADUser): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:76
+Line |
+  76 |  New-ADUser -Name "David Moreau" -GivenName "David" -Surname "Moreau"  …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADUser: C:\Users\Administrateur\Scripts\ad_admin.ps1:76
+Line |
+  76 |  New-ADUser -Name "David Moreau" -GivenName "David" -Surname "Moreau"  …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+Utilisateurs créés dans les OU.
+PS>TerminatingError(New-ADGroup): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADGroup: C:\Users\Administrateur\Scripts\ad_admin.ps1:83
+Line |
+  83 |  New-ADGroup -Name "GRP_Direction" -Path "OU=Direction,DC=EntrepriseXY …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADGroup: C:\Users\Administrateur\Scripts\ad_admin.ps1:83
+Line |
+  83 |  New-ADGroup -Name "GRP_Direction" -Path "OU=Direction,DC=EntrepriseXY …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+>> TerminatingError(New-ADGroup): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADGroup: C:\Users\Administrateur\Scripts\ad_admin.ps1:84
+Line |
+  84 |  New-ADGroup -Name "GRP_RH" -Path "OU=RH,DC=EntrepriseXYZ,DC=local" -G …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADGroup: C:\Users\Administrateur\Scripts\ad_admin.ps1:84
+Line |
+  84 |  New-ADGroup -Name "GRP_RH" -Path "OU=RH,DC=EntrepriseXYZ,DC=local" -G …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+>> TerminatingError(New-ADGroup): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+New-ADGroup: C:\Users\Administrateur\Scripts\ad_admin.ps1:85
+Line |
+  85 |  New-ADGroup -Name "GRP_IT" -Path "OU=Informatique,DC=EntrepriseXYZ,DC …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+New-ADGroup: C:\Users\Administrateur\Scripts\ad_admin.ps1:85
+Line |
+  85 |  New-ADGroup -Name "GRP_IT" -Path "OU=Informatique,DC=EntrepriseXYZ,DC …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+Groupes créés : GRP_Direction, GRP_RH, GRP_IT
+PS>TerminatingError(Add-ADGroupMember): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:92
+Line |
+  92 |  Add-ADGroupMember -Identity "GRP_IT" -Members "jmartin"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:92
+Line |
+  92 |  Add-ADGroupMember -Identity "GRP_IT" -Members "jmartin"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+>> TerminatingError(Add-ADGroupMember): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:93
+Line |
+  93 |  Add-ADGroupMember -Identity "GRP_IT" -Members "epetit"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:93
+Line |
+  93 |  Add-ADGroupMember -Identity "GRP_IT" -Members "epetit"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+>> TerminatingError(Add-ADGroupMember): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:94
+Line |
+  94 |  Add-ADGroupMember -Identity "GRP_IT" -Members "dmoreau"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:94
+Line |
+  94 |  Add-ADGroupMember -Identity "GRP_IT" -Members "dmoreau"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+>> TerminatingError(Add-ADGroupMember): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:95
+Line |
+  95 |  Add-ADGroupMember -Identity "GRP_RH" -Members "sdurand"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:95
+Line |
+  95 |  Add-ADGroupMember -Identity "GRP_RH" -Members "sdurand"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+>> TerminatingError(Add-ADGroupMember): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:96
+Line |
+  96 |  Add-ADGroupMember -Identity "GRP_RH" -Members "lmeyer"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:96
+Line |
+  96 |  Add-ADGroupMember -Identity "GRP_RH" -Members "lmeyer"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+>> TerminatingError(Add-ADGroupMember): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:97
+Line |
+  97 |  Add-ADGroupMember -Identity "GRP_RH" -Members "alegrand"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:97
+Line |
+  97 |  Add-ADGroupMember -Identity "GRP_RH" -Members "alegrand"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+>> TerminatingError(Add-ADGroupMember): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:98
+Line |
+  98 |  Add-ADGroupMember -Identity "GRP_Direction" -Members "mdupont"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:98
+Line |
+  98 |  Add-ADGroupMember -Identity "GRP_Direction" -Members "mdupont"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+>> TerminatingError(Add-ADGroupMember): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:99
+Line |
+  99 |  Add-ADGroupMember -Identity "GRP_Direction" -Members "clemoine"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:99
+Line |
+  99 |  Add-ADGroupMember -Identity "GRP_Direction" -Members "clemoine"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+>> TerminatingError(Add-ADGroupMember): "Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution."
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:100
+Line |
+ 100 |  Add-ADGroupMember -Identity "GRP_Direction" -Members "pbernard"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+Add-ADGroupMember: C:\Users\Administrateur\Scripts\ad_admin.ps1:100
+Line |
+ 100 |  Add-ADGroupMember -Identity "GRP_Direction" -Members "pbernard"
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Impossible de trouver un serveur par défaut avec les services Web Active Directory en cours d’exécution.
+
+Utilisateurs assignés aux groupes correspondants.
+
+PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages
+PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Users
+PSChildName         : Partages
+PSDrive             : C
+PSProvider          : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer       : True
+Name                : Partages
+Parent              : C:\Users
+Root                : C:\
+Exists              : True
+FullName            : C:\Users\Partages
+Extension           : 
+CreationTime        : 17/11/2025 02:48:43
+CreationTimeUtc     : 17/11/2025 01:48:43
+LastAccessTime      : 17/11/2025 02:48:43
+LastAccessTimeUtc   : 17/11/2025 01:48:43
+LastWriteTime       : 17/11/2025 02:48:43
+LastWriteTimeUtc    : 17/11/2025 01:48:43
+LinkTarget          : 
+UnixFileMode        : -1
+Attributes          : Directory
+Mode                : d----
+ModeWithoutHardLink : d----
+BaseName            : Partages
+ResolvedTarget      : C:\Users\Partages
+Target              : 
+LinkType            : 
+
+
+PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages\Direction
+PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages
+PSChildName         : Direction
+PSDrive             : C
+PSProvider          : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer       : True
+Name                : Direction
+Parent              : C:\Users\Partages
+Root                : C:\
+Exists              : True
+FullName            : C:\Users\Partages\Direction
+Extension           : 
+CreationTime        : 17/11/2025 02:48:43
+CreationTimeUtc     : 17/11/2025 01:48:43
+LastAccessTime      : 17/11/2025 02:48:43
+LastAccessTimeUtc   : 17/11/2025 01:48:43
+LastWriteTime       : 17/11/2025 02:48:43
+LastWriteTimeUtc    : 17/11/2025 01:48:43
+LinkTarget          : 
+UnixFileMode        : -1
+Attributes          : Directory
+Mode                : d----
+ModeWithoutHardLink : d----
+BaseName            : Direction
+ResolvedTarget      : C:\Users\Partages\Direction
+Target              : 
+LinkType            : 
+
+
+PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages\RH
+PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages
+PSChildName         : RH
+PSDrive             : C
+PSProvider          : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer       : True
+Name                : RH
+Parent              : C:\Users\Partages
+Root                : C:\
+Exists              : True
+FullName            : C:\Users\Partages\RH
+Extension           : 
+CreationTime        : 17/11/2025 02:48:43
+CreationTimeUtc     : 17/11/2025 01:48:43
+LastAccessTime      : 17/11/2025 02:48:43
+LastAccessTimeUtc   : 17/11/2025 01:48:43
+LastWriteTime       : 17/11/2025 02:48:43
+LastWriteTimeUtc    : 17/11/2025 01:48:43
+LinkTarget          : 
+UnixFileMode        : -1
+Attributes          : Directory
+Mode                : d----
+ModeWithoutHardLink : d----
+BaseName            : RH
+ResolvedTarget      : C:\Users\Partages\RH
+Target              : 
+LinkType            : 
+
+
+PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages\Informatique
+PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages
+PSChildName         : Informatique
+PSDrive             : C
+PSProvider          : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer       : True
+Name                : Informatique
+Parent              : C:\Users\Partages
+Root                : C:\
+Exists              : True
+FullName            : C:\Users\Partages\Informatique
+Extension           : 
+CreationTime        : 17/11/2025 02:48:43
+CreationTimeUtc     : 17/11/2025 01:48:43
+LastAccessTime      : 17/11/2025 02:48:43
+LastAccessTimeUtc   : 17/11/2025 01:48:43
+LastWriteTime       : 17/11/2025 02:48:43
+LastWriteTimeUtc    : 17/11/2025 01:48:43
+LinkTarget          : 
+UnixFileMode        : -1
+Attributes          : Directory
+Mode                : d----
+ModeWithoutHardLink : d----
+BaseName            : Informatique
+ResolvedTarget      : C:\Users\Partages\Informatique
+Target              : 
+LinkType            : 
+
+New-SmbShare: C:\Users\Administrateur\Scripts\ad_admin.ps1:114
+Line |
+ 114 |  New-SmbShare -Name "Direction" -Path "C:\Users\Partages\Direction" -F …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | La relation d’approbation entre cette station de travail et le domaine principal a échoué.
+New-SmbShare: C:\Users\Administrateur\Scripts\ad_admin.ps1:114
+Line |
+ 114 |  New-SmbShare -Name "Direction" -Path "C:\Users\Partages\Direction" -F …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | La relation d’approbation entre cette station de travail et le domaine principal a échoué. 
+
+New-SmbShare: C:\Users\Administrateur\Scripts\ad_admin.ps1:115
+Line |
+ 115 |  New-SmbShare -Name "RH" -Path "C:\Users\Partages\RH" -FullAccess "GRP …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | La relation d’approbation entre cette station de travail et le domaine principal a échoué.
+New-SmbShare: C:\Users\Administrateur\Scripts\ad_admin.ps1:115
+Line |
+ 115 |  New-SmbShare -Name "RH" -Path "C:\Users\Partages\RH" -FullAccess "GRP …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | La relation d’approbation entre cette station de travail et le domaine principal a échoué. 
+
+New-SmbShare: C:\Users\Administrateur\Scripts\ad_admin.ps1:116
+Line |
+ 116 |  New-SmbShare -Name "Informatique" -Path "C:\Users\Partages\Informatiq …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | La relation d’approbation entre cette station de travail et le domaine principal a échoué.
+New-SmbShare: C:\Users\Administrateur\Scripts\ad_admin.ps1:116
+Line |
+ 116 |  New-SmbShare -Name "Informatique" -Path "C:\Users\Partages\Informatiq …
+     |  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | La relation d’approbation entre cette station de travail et le domaine principal a échoué. 
+
+GRP_Direction: La relation d’approbation entre cette station de travail et le domaine principal a échoué.            ]
+0 fichiers correctement traités ; échec du traitement de 1 fichiers                                                  ]
+Install-ADDSForest [Terminé                                                                                          ]
+0 fichiers correctement traités ; échec du traitement de 1 fichiers
+
+**********************
+PowerShell transcript start
+Start time: 20251117025616
+Username: ENTREPRISEXYZ\administrateur
+RunAs User: ENTREPRISEXYZ\administrateur
+Configuration Name: 
+Machine: SRV-DC01 (Microsoft Windows NT 10.0.26100.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll -NoExit -RemoveWorkingDirectoryTrailingCharacter -WorkingDirectory C:\Users\Administrateur\Scripts! -Command $host.UI.RawUI.WindowTitle = 'PowerShell 7 (x64)'
+Process ID: 7092
+PSVersion: 7.5.4
+PSEdition: Core
+GitCommitId: 7.5.4
+OS: Microsoft Windows 10.0.26100
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is O:\transcript.txt
+Installation du rôle Active Directory Domain Services...
+
+Success Restart Needed Exit Code      Feature Result
+------- -------------- ---------      --------------
+True    No             NoChangeNeeded {}
+Installation AD déjà effectuée.
+OU créée : Direction
+OU créée : RH
+OU créée : Informatique
+Création des Unités Organisationnelles terminée.
+Utilisateurs créés dans les OU.
+Groupes créés : GRP_Direction, GRP_RH, GRP_IT
+Utilisateurs assignés aux groupes correspondants.
+
+PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages
+PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Users
+PSChildName         : Partages
+PSDrive             : C
+PSProvider          : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer       : True
+Name                : Partages
+Parent              : C:\Users
+Root                : C:\
+Exists              : True
+FullName            : C:\Users\Partages
+Extension           : 
+CreationTime        : 17/11/2025 02:48:43
+CreationTimeUtc     : 17/11/2025 01:48:43
+LastAccessTime      : 17/11/2025 02:48:43
+LastAccessTimeUtc   : 17/11/2025 01:48:43
+LastWriteTime       : 17/11/2025 02:48:43
+LastWriteTimeUtc    : 17/11/2025 01:48:43
+LinkTarget          : 
+UnixFileMode        : -1
+Attributes          : Directory
+Mode                : d----
+ModeWithoutHardLink : d----
+BaseName            : Partages
+ResolvedTarget      : C:\Users\Partages
+Target              : 
+LinkType            : 
+
+
+PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages\Direction
+PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages
+PSChildName         : Direction
+PSDrive             : C
+PSProvider          : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer       : True
+Name                : Direction
+Parent              : C:\Users\Partages
+Root                : C:\
+Exists              : True
+FullName            : C:\Users\Partages\Direction
+Extension           : 
+CreationTime        : 17/11/2025 02:48:43
+CreationTimeUtc     : 17/11/2025 01:48:43
+LastAccessTime      : 17/11/2025 02:48:43
+LastAccessTimeUtc   : 17/11/2025 01:48:43
+LastWriteTime       : 17/11/2025 02:48:43
+LastWriteTimeUtc    : 17/11/2025 01:48:43
+LinkTarget          : 
+UnixFileMode        : -1
+Attributes          : Directory
+Mode                : d----
+ModeWithoutHardLink : d----
+BaseName            : Direction
+ResolvedTarget      : C:\Users\Partages\Direction
+Target              : 
+LinkType            : 
+
+
+PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages\RH
+PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages
+PSChildName         : RH
+PSDrive             : C
+PSProvider          : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer       : True
+Name                : RH
+Parent              : C:\Users\Partages
+Root                : C:\
+Exists              : True
+FullName            : C:\Users\Partages\RH
+Extension           : 
+CreationTime        : 17/11/2025 02:48:43
+CreationTimeUtc     : 17/11/2025 01:48:43
+LastAccessTime      : 17/11/2025 02:48:43
+LastAccessTimeUtc   : 17/11/2025 01:48:43
+LastWriteTime       : 17/11/2025 02:48:43
+LastWriteTimeUtc    : 17/11/2025 01:48:43
+LinkTarget          : 
+UnixFileMode        : -1
+Attributes          : Directory
+Mode                : d----
+ModeWithoutHardLink : d----
+BaseName            : RH
+ResolvedTarget      : C:\Users\Partages\RH
+Target              : 
+LinkType            : 
+
+
+PSPath              : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages\Informatique
+PSParentPath        : Microsoft.PowerShell.Core\FileSystem::C:\Users\Partages
+PSChildName         : Informatique
+PSDrive             : C
+PSProvider          : Microsoft.PowerShell.Core\FileSystem
+PSIsContainer       : True
+Name                : Informatique
+Parent              : C:\Users\Partages
+Root                : C:\
+Exists              : True
+FullName            : C:\Users\Partages\Informatique
+Extension           : 
+CreationTime        : 17/11/2025 02:48:43
+CreationTimeUtc     : 17/11/2025 01:48:43
+LastAccessTime      : 17/11/2025 02:48:43
+LastAccessTimeUtc   : 17/11/2025 01:48:43
+LastWriteTime       : 17/11/2025 02:48:43
+LastWriteTimeUtc    : 17/11/2025 01:48:43
+LinkTarget          : 
+UnixFileMode        : -1
+Attributes          : Directory
+Mode                : d----
+ModeWithoutHardLink : d----
+BaseName            : Informatique
+ResolvedTarget      : C:\Users\Partages\Informatique
+Target              : 
+LinkType            : 
+
+
+AvailabilityType       : NonClustered
+CachingMode            : Manual
+CATimeout              : 0
+CompressData           : False
+ConcurrentUserLimit    : 0
+ContinuouslyAvailable  : False
+CurrentUsers           : 0
+Description            : 
+DirectoryHandleLeasing : True
+EncryptData            : False
+FolderEnumerationMode  : Unrestricted
+IdentityRemoting       : False
+Infrastructure         : False
+IsolatedTransport      : False
+LeasingMode            : Full
+Name                   : Direction
+Path                   : C:\Users\Partages\Direction
+QoSFlowScope           : File
+QoSPolicyId            : {00000000-0000-0000-0000-000000000000}
+Scoped                 : False
+ScopeName              : *
+SecurityDescriptor     : O:SYG:SYD:(A;;FA;;;S-1-5-21-2963546259-2162875419-2729477650-1112)
+ShadowCopy             : False
+ShareState             : Online
+ShareType              : FileSystemDirectory
+SmbInstance            : Default
+Special                : False
+Temporary              : False
+Volume                 : \\?\Volume{39715d91-c523-4c79-81ad-1982d1344866}\
+PSComputerName         : 
+PresetPathAcl          : System.Security.AccessControl.DirectorySecurity
+
+
+AvailabilityType       : NonClustered
+CachingMode            : Manual
+CATimeout              : 0
+CompressData           : False
+ConcurrentUserLimit    : 0
+ContinuouslyAvailable  : False
+CurrentUsers           : 0
+Description            : 
+DirectoryHandleLeasing : True
+EncryptData            : False
+FolderEnumerationMode  : Unrestricted
+IdentityRemoting       : False
+Infrastructure         : False
+IsolatedTransport      : False
+LeasingMode            : Full
+Name                   : RH
+Path                   : C:\Users\Partages\RH
+QoSFlowScope           : File
+QoSPolicyId            : {00000000-0000-0000-0000-000000000000}
+Scoped                 : False
+ScopeName              : *
+SecurityDescriptor     : O:SYG:SYD:(A;;FA;;;S-1-5-21-2963546259-2162875419-2729477650-1113)
+ShadowCopy             : False
+ShareState             : Online
+ShareType              : FileSystemDirectory
+SmbInstance            : Default
+Special                : False
+Temporary              : False
+Volume                 : \\?\Volume{39715d91-c523-4c79-81ad-1982d1344866}\
+PSComputerName         : 
+PresetPathAcl          : System.Security.AccessControl.DirectorySecurity
+
+
+AvailabilityType       : NonClustered
+CachingMode            : Manual
+CATimeout              : 0
+CompressData           : False
+ConcurrentUserLimit    : 0
+ContinuouslyAvailable  : False
+CurrentUsers           : 0
+Description            : 
+DirectoryHandleLeasing : True
+EncryptData            : False
+FolderEnumerationMode  : Unrestricted
+IdentityRemoting       : False
+Infrastructure         : False
+IsolatedTransport      : False
+LeasingMode            : Full
+Name                   : Informatique
+Path                   : C:\Users\Partages\Informatique
+QoSFlowScope           : File
+QoSPolicyId            : {00000000-0000-0000-0000-000000000000}
+Scoped                 : False
+ScopeName              : *
+SecurityDescriptor     : O:SYG:SYD:(A;;FA;;;S-1-5-21-2963546259-2162875419-2729477650-1114)
+ShadowCopy             : False
+ShareState             : Online
+ShareType              : FileSystemDirectory
+SmbInstance            : Default
+Special                : False
+Temporary              : False
+Volume                 : \\?\Volume{39715d91-c523-4c79-81ad-1982d1344866}\
+PSComputerName         : 
+PresetPathAcl          : System.Security.AccessControl.DirectorySecurity
+
+
+
+
+Modification du mot de passe administrateur du domaine...
+Configuration Active Directory terminée.
+N'oubliez pas de redémarrer le serveur pour appliquer toutes les modifications.
+**********************
+PowerShell transcript end
+End time: 20251117025722
+**********************
